@@ -1,0 +1,124 @@
+/* === style.css === */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  margin: 0;
+  transition: background 0.4s ease, color 0.4s ease;
+  scroll-behavior: smooth;
+}
+
+body.dark {
+  background: #111;
+  color: #f0f0f0;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.typewriter {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  border-right: 0.15em solid #666;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2.5s steps(20, end) forwards, blink 0.75s step-end infinite;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+@keyframes typing {
+  to {
+    width: 12ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  transition: all 0.4s ease;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #000;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: background 0.4s;
+}
+
+body.dark .glass {
+  background: rgba(40, 40, 40, 0.6);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#toggle-dark {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 999;
+  color: inherit;
+}
+
+#toggle-dark:hover {
+  transform: rotate(15deg);
+}
